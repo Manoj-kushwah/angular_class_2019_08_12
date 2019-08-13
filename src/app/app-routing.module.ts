@@ -5,7 +5,10 @@ import { NavbarComponent } from './shared/navbar.component';
 
 const routes: Routes = [
   {path: '', loadChildren: './home/home.module#HomeModule'},
-  {path: 'navbar', component: NavbarComponent}
+  {path: 'about', loadChildren: './about/about.module#AboutModule'},
+  {path: 'login', loadChildren: './login/login.module#LoginModule'},
+  {path: 'sign-up', loadChildren: './sign-up/sign-up.module#SignUpModule'},
+  // {path: 'navbar', component: NavbarComponent}
 ];
 
 @NgModule({
