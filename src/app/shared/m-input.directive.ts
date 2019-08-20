@@ -1,7 +1,7 @@
 import { Directive, OnInit, ElementRef } from "@angular/core";
 
 @Directive({
-    selector: 'h1',
+    selector: 'm-input',
 })
 export class MInputDirective implements OnInit {
 
