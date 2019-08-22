@@ -8,7 +8,7 @@ import { AppService } from './services/app.service';
 })
 export class AppComponent {
   title = 'myapp';
-
+  marks = 450;
   constructor(private appService: AppService) {
     console.log('AppComponent: appService: ', appService);
   }

@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { ListPipe } from '../shared/list.pipe';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    ListPipe,
   ],
   imports: [
     CommonModule,

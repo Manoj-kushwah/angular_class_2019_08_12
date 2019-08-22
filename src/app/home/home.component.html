@@ -1,0 +1,7 @@
+<h1>App home</h1>
+
+{{list}}
+
+<ul>
+    <li *ngFor="let n of nameList | list" [ngClass]="{hide: n=='Rajesh'}">{{n}}</li>
+</ul>

@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './shared/navbar.component';
 import { MInputDirective } from './shared/m-input.directive';
+import { PresentPipe } from './shared/present.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MInputDirective,
+    PresentPipe,
   ],
   imports: [
     BrowserModule,

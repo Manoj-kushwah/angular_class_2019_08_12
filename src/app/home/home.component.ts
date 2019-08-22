@@ -3,11 +3,11 @@ import { AppService } from '../services/app.service';
 
 @Component({
     selector: 'app-home',
-    template: '<h1>App home</h1>',
+    templateUrl: './home.component.html',
     styles: []
 })
 export class HomeComponent implements OnInit,OnChanges,OnDestroy {
-
+    private nameList: string[] = [];
     constructor(private appService: AppService) {
         console.log('HomeComponent: appService: ', appService);
     }
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit,OnChanges,OnDestroy {
     }
 
     ngOnInit() {
-        let app: string[] = this.appService.getItems();
-        console.log('HomeComponent: ngOnInit: app-> ', app);
+        this.nameList = this.appService.getItems();
+        console.log('HomeComponent: ngOnInit: list-> ', this.nameList);
     }
 }

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class AppService {
   private items: string[];
   constructor() { 
-    this.items = ["Hello","Student"];
+    this.items = ["Raj","Pooja","Manoj","Rajesh","Nitesh","Boby"];
   }
 
   public getItems(): string[] {
