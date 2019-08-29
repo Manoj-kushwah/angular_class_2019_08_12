@@ -11,7 +11,6 @@ import { PresentPipe } from './shared/present.pipe';
   declarations: [
     AppComponent,
     NavbarComponent,
-    MInputDirective,
     PresentPipe,
   ],
   imports: [

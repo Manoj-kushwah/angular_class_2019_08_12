@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, OnDestroy } from "@angular/core";
+import { Component, OnInit, OnChanges, OnDestroy, ElementRef, ViewChild } from "@angular/core";
 import { AppService } from '../services/app.service';
 
 @Component({
@@ -8,7 +8,11 @@ import { AppService } from '../services/app.service';
 })
 export class HomeComponent implements OnInit,OnChanges,OnDestroy {
     private nameList: string[] = [];
+
+    @ViewChild('el1') private el1Ref: ElementRef;
+    
     constructor(private appService: AppService) {
+        console.log('HomeComponent: ', this);
         console.log('HomeComponent: appService: ', appService);
     }
 
@@ -23,5 +27,9 @@ export class HomeComponent implements OnInit,OnChanges,OnDestroy {
     ngOnInit() {
         this.nameList = this.appService.getItems();
         console.log('HomeComponent: ngOnInit: list-> ', this.nameList);
+    }
+
+    public inputValue(event: any): void{
+        console.log("inputValue: event: ", event);
     }
 }

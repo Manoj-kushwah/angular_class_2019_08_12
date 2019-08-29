@@ -5,3 +5,16 @@
 <ul>
     <li *ngFor="let n of nameList | list" [ngClass]="{hide: n=='Rajesh'}">{{n}}</li>
 </ul>
+<fieldset>
+    <input #el1 m-input [age]="50" type="number" (ageOut)="inputValue($event)" /> <!--(ageOut)="$event"-->
+</fieldset>
+{{el1.value}}
+<fieldset>
+        <input type="number" [(ngModel)]="caseValue"  value="2" />
+        <div [ngSwitch]="caseValue">
+                <div *ngSwitchCase="1">Case 1</div>
+                <div *ngSwitchCase="2">Case 2</div>
+                <div *ngSwitchCase="3">Case 3</div>
+                <div *ngSwitchDefault="">Default</div>
+        </div>
+</fieldset>
