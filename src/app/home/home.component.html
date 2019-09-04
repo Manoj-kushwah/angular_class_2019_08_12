@@ -9,6 +9,7 @@
     <input #el1 m-input [age]="50" type="number" (ageOut)="inputValue($event)" /> <!--(ageOut)="$event"-->
 </fieldset>
 {{el1.value}}
+<h1></h1>
 <fieldset>
         <input type="number" [(ngModel)]="caseValue"  value="2" />
         <div [ngSwitch]="caseValue">
@@ -17,4 +18,23 @@
                 <div *ngSwitchCase="3">Case 3</div>
                 <div *ngSwitchDefault="">Default</div>
         </div>
+</fieldset>
+<h1></h1>
+<fieldset>
+    <input type="checkbox" [(ngModel)]="hideShow"/>
+    <button (click)="changeDiv(true);">Hide</button>
+    <button (click)="changeDiv(false);">Show</button>
+    <div [hidden]="hideShow" style="height: 100px; background: #0fe5c1">
+
+    </div>
+</fieldset>
+<h1></h1>
+<fieldset>
+    <!-- <m-dynamic></m-dynamic> -->
+</fieldset>
+<h1></h1>
+<fieldset>
+        <ng-template #myTemp>
+        
+        </ng-template>
 </fieldset>

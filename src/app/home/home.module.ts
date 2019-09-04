@@ -17,6 +17,6 @@ import { MInputDirective } from '../shared/m-input.directive';
     CommonModule,
     FormsModule,
     HomeRoutingModule
-  ]
+  ],
 })
 export class HomeModule { }
