@@ -1,1 +1,40 @@
 <p>sign-up works!</p>
+<form #formSignUp="ngForm" (ngSubmit)="onSubmitSignUp($event)">
+    <table align="center">
+        <tr>
+            <td>
+                First name
+            </td>
+            <td>: <input name="firstName" ngModel type="text" placeholder="First name" required autofocus/></td>
+        </tr>
+        <tr>
+            <td>
+                Last name
+            </td>
+            <td>: <input name="lastName" ngModel type="text" placeholder="Last name" required/></td>
+        </tr>
+        <tr>
+            <td>
+                Email
+            </td>
+            <td>: <input name="email" ngModel type="email" placeholder="Email" required/></td>
+        </tr>
+        <tr>
+            <td>
+                Password
+            </td>
+            <td>: <input name="password" ngModel type="password" placeholder="Password" required/></td>
+        </tr>
+        <tr>
+            <td>
+                Confirm
+            </td>
+            <td>: <input name="confirm" ngModel type="password" placeholder="Confirm" required/></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td><input type="submit" value="Sign Up"/></td>
+        </tr>
+    </table>
+</form>
